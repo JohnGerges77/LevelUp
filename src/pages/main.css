@@ -1,0 +1,101 @@
+
+.logo {
+  font-family: "Bauhaus 93";
+  display: flex;
+  font-size: 2.6em;
+  color: white;
+  align-items:center;
+  gap: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+}
+
+.side_menu {
+  width: 18%;
+  height: 95vh;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0, 1);
+  border-radius: 30px;
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+}
+.side_menu.active{
+  width: 7%;
+  overflow: none;
+  transition: 1s;
+  align-items: center;
+}
+.side_menu.active .logo span{
+display: none;
+}
+
+.banner {
+  width: 83%;
+  height: 95vh;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0, 1);
+  border-radius: 30px;
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+}
+.banner.active{
+  position: relative;
+  width: 93%;
+  transition: 1s;
+
+
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play{
+  display: none;
+}
+.swiper-slide.swiper-slide-active .playBtn.active .pause{
+  display: block;
+}
+.youtube_video{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85%;
+  height: 75%;
+  border-radius: 0 30px 0 30px;
+  border: 5px solid transparent;
+  background-color: var(--second);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.35);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: .5s;
+  transform-origin: top right;
+}
+
+.swiper-slide.swiper-slide-active .youtube_video.active{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.filter_li:hover,
+.filter_li.active
+{
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+  5px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.box_shadow{
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.35);
+}

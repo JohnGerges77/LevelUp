@@ -1,0 +1,267 @@
+[
+    {
+      "_id": 1,
+      "title": "Diablo III",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "High",
+      "category": "RPG",
+      "rating": 5,
+      "discount": 0.5,
+      "price": 99.0,
+      "img": "./assets/games/diablo-3-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/M2TpNQhfkp4",
+      "active": false
+    },
+  
+    {
+      "_id": 2,
+      "title": "League of Legends",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category": "MOBA",
+      "rating": 3,
+      "discount": 0.5,
+      "price": 79.0,
+      "img": "./assets/games/lol-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/vzHrjOMfHPY",
+      "active": true
+    },
+  
+    {
+      "_id": 3,
+      "title": "Dota II",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category": "MOBA",
+      "rating": 4,
+      "discount": 0.3,
+      "price": 85.0,
+      "img": "./assets/games/dota-2-bg.jpg",
+      "trailer": "https://www.youtube.com/embed/-cSFPIwMEq4",
+      "active": false
+    },
+    {
+      "_id": 4,
+      "title": "King of Fighters XV",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Fighting",
+      "rating": 3,
+      "discount": 0.2,
+      "price": 65.6,
+      "img": "./assets/games/king-of-fighters-xv.jpeg",
+      "trailer": "https://www.youtube.com/embed/_o7Ip64-Sio",
+      "active": false
+    },
+    {
+      "_id": 5,
+      "title": "Mario Kart 8 Deluxe",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Racing",
+      "rating": 3,
+      "discount": 0.3,
+      "price": 52.56,
+      "img": "./assets/games/mario-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/tKlRN2YpxRE",
+      "active": false
+    },
+  
+    {
+      "_id": 6,
+      "title": "Halo Infinite",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category": "Battle",
+      "rating": 4,
+      "discount": 0,
+      "price": 85.8,
+      "img": "./assets/games/halo-infinite-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/PyMlV5_HRWk",
+      "active": false
+    },
+    {
+      "_id": 7,
+      "title": "Fortnite Spider-Man",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Battle",
+      "rating": 3,
+      "discount": 0.6,
+      "price": 69.0,
+      "img": "./assets/games/fortnite-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/7bq0Boq2B3Y",
+      "active": false
+    },
+    {
+      "_id": 8,
+      "title": "Forza Horizon 5",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "High",
+      "category": "Racing",
+      "rating": 5,
+      "discount": 0,
+      "price": 129.0,
+      "img": "./assets/games/forza-horizon-5-bg.jpeg",
+      "trailer": "https://www.youtube.com/embed/FYH9n37B7Yw",
+      "active": false
+    },
+ 
+    {
+      "_id": 9,
+      "title": "Valorant",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "High",
+      "category": "RPG",
+      "rating": 2,
+      "discount": 0.4,
+      "price": 93.45,
+      "img": "./assets/games/thumbnail.jpg",
+   
+      "active": false
+    },
+    {
+      "_id": 10,
+      "title": "Destiny 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Battle",
+      "rating": 4,
+      "discount": 0,
+      "price": 89.0,
+      "img": "./assets/games/Destiny.jpg",
+  
+      "active": false
+    },
+    {
+      "_id": 11,
+      "title": "Crossout",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "High",
+      "category": "Racing",
+      "rating": 3,
+      "discount": 0.3,
+      "price": 65.5,
+      "img": "./assets/games/Crossout.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 12,
+      "title": "Dauntless",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Fighting",
+      "rating": 4,
+      "discount": 0.2,
+      "price": 78.0,
+      "img": "./assets/games/Dauntless.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 13,
+      "title": "Battle Teams 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "High",
+      "category": "Battle",
+      "rating": 3,
+      "discount": 0.35,
+      "price": 82.5,
+      "img": "./assets/games/Battle Teams 2.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 14,
+      "title": "COD: Warzone",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "Battle",
+      "rating": 5,
+      "discount": 0.35,
+      "price": 82.5,
+      "img": "./assets/games/Call Of Duty Warzone.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 15,
+      "title": "Tarisland",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category":"Fighting",
+      "rating": 4,
+      "discount": 0.45,
+      "price": 68.5,
+      "img": "./assets/games/Tarisland.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 16,
+      "title": "Lost Light",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Hign",
+      "category": "Battle",
+      "rating": 5,
+      "discount": 0.20,
+      "price": 86,
+      "img": "./assets/games/Lost Light.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 17,
+      "title": "Destiny's Divide",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Entry",
+      "category": "RPG",
+      "rating": 2,
+      "discount": 0.15,
+      "price": 72,
+      "img": "./assets/games/Destiny's Divide.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 18,
+      "title": "Allods",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Hign",
+      "category": "MOBA",
+      "rating": 4,
+      "discount": 0.30,
+      "price": 73,
+      "img": "./assets/games/Allods.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 19,
+      "title": "Spacelords",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category": "Fighting",
+      "rating": 3,
+      "discount": 0.20,
+      "price": 98,
+      "img": "./assets/games/Spacelords.jpg",
+     
+      "active": false
+    },
+    {
+      "_id": 20,
+      "title": "Dark Knight",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio non nobis, molestiae eum quod qui",
+      "level": "Median",
+      "category": "RPG",
+      "rating": 4,
+      "discount": 0.20,
+      "price": 104,
+      "img": "./assets/games/Dark Knight.jpg",
+     
+      "active": false
+    }
+  ]
+  
