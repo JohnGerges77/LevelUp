@@ -2,84 +2,80 @@ import React, { useState } from "react";
 import filterData from "../data/filterData";
 import { IoIosSearch } from "react-icons/io";
 import GameCard from "../components/GameCard";
+
 function Category({ games2 }) {
   const [categoryData, setCategoryData] = useState(games2);
-
-  const [filters, setfilters] = useState(filterData);
+  const [filters, setFilters] = useState(filterData);
+  const [search, setSearch] = useState("");
 
   const handleFilterActive = (name) => {
- 
-    setfilters(
-      
-      filters.map((filter) => {
-        filter.active = false;
-        if (filter.name === name) {
-          filter.active = true;
-        }
-        return filter;
-      })
-    );   
+    setFilters(
+      filters.map((filter) => ({
+        ...filter,
+        active: filter.name === name,
+      }))
+    );
+
     if (name === "All") {
       setCategoryData(games2);
       return;
     }
+
     setCategoryData(games2.filter((game) => game.category === name));
   };
 
-  
-  //search
-  const[search,setSearch]=useState()
-
-  const handleSearch= e =>{
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
     setCategoryData(
-      games2.filter((game)=>game.title.toLowerCase().includes(e.target.value.toLowerCase()))
-    )
-setSearch(e.target.value)
+      games2.filter((game) =>
+        game.title.toLowerCase().includes(value)
+      )
+    );
+  };
 
-  }
-  
-  
   return (
-    <section className="overflow-y-scroll">
-      <div className="text-stone-100 flex items-center justify-between">
-        <div>
-          <ul className="flex flex-wrap gap-[15px] p-[0] my-[30px] mx-[0] list-none">
-            {filters.map((item) => (
-              <li
-                onClick={() => handleFilterActive(item.name)}
-                className={`filter_li ${
-                  item.active ? "active" : undefined
-                } transition-[0.3s] uppercase cursor-pointer 
-            py-[10px] px-[25px] rounded-[10px]`}
-                key={item.id}
-              >
-                {item.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <section className="overflow-y-auto px-4 md:px-8">
+      {/* Filters & Search */}
+      <div className="flex flex-col lg:flex-row gap-6 justify-between items-start lg:items-center">
+        <ul className="flex flex-wrap gap-3 list-none">
+          {filters.map((item) => (
+            <li
+              key={item.id}
+              onClick={() => handleFilterActive(item.name)}
+              className={`filter_li ${
+                item.active ? "active" : ""
+              } uppercase cursor-pointer py-2 px-5 rounded-lg transition text-white`}
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
 
-        <div
-          className="box_shadow  inline-flex 
-           w-[300px] h-[50px] gap-[15px] py-[8px] px-[20px]
-          rounded-[10px] items-center mr-3"
-        >
-          <i className="text-[1.3rem]">
-            {" "}
-            <IoIosSearch />
-          </i>
+        <div className="box_shadow flex items-center gap-3 w-full sm:w-[300px] h-[45px] px-4 rounded-lg">
+          <IoIosSearch className="text-xl text-slate-300" />
           <input
-          value={search}
-          onChange={handleSearch}
+            value={search}
+            onChange={handleSearch}
             type="text"
-            placeholder="Seacrh"
-            className="outline-none border-none bg-transparent 
-text-[1.2rem] focus:text-slate-100
- placeholder:text-slate-400"
+            placeholder="Search"
+            className="bg-transparent outline-none w-full text-slate-100 placeholder:text-slate-400"
           />
         </div>
       </div>
-      <div className="flex flex-wrap  justify-around items-center ">
+
+      {/* Games */}
+      <div
+        className="
+          grid grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-4
+          gap-6
+          mt-8
+          place-items-center
+        "
+      >
         {categoryData.map((game) => (
           <GameCard key={game._id} game={game} />
         ))}

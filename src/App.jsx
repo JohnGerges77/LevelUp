@@ -19,7 +19,7 @@ function App() {
   
     async function fetchGames(){
    
-      const res=await fetch(`http://localhost:5173/api/gamesData.json`);
+      const res=await fetch(`/gamesData.json`);
       const data =await res.json();
       setGames((data))
   
@@ -35,7 +35,7 @@ function App() {
   
     async function fetchGames2(){
    
-      const res=await fetch(`http://localhost:5173/api/gamesData2.json`);
+      const res=await fetch(`/gamesData2.json`);
       const data =await res.json();
       setGames2((data))
   

@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { FaPause } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa"
-// import Swiper from 'swiper';
+import React from "react";
 import {
   Navigation,
   Pagination,
@@ -14,78 +11,76 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import styled from "styled-components";
-
-
-
 
 function SwiperGames({ games }) {
-  const [active, setactive] = useState(false);
-  function handleActive() {
-    setactive(!active);
-  }
   return (
-
-
     <Swiper
-      effect={"coverflow"}
-      grabCursor={true}
-      slidesPerView={2}
-      spaceBetween={50}
-      navigation={true}
-      loop={true}
-      centeredSlides={"auto"}
-      coverflowEffect={{
-        rotate: 35,
-        stretch: 200,
-        depth: 250,
-        modifier: 1,
-        slideShadows: true,
+      effect="coverflow"
+      grabCursor
+      loop
+      centeredSlides
+      navigation
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
       }}
-       autoplay={{
-          delay:3000,
-          disableOnInteraction:false,
-       }}
-      modules={[EffectCoverflow, Navigation, Autoplay]}
-      className="w-[95%] pb-7"
+      coverflowEffect={{
+        rotate: 25,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      }}
+      breakpoints={{
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1.2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      }}
+      modules={[EffectCoverflow, Navigation, Autoplay, Pagination]}
+      className="w-full pb-10"
     >
-      
       {games.map((game) => (
-        <SwiperSlide key={game._id} className=" h-[290px] w-[550px] ">
-          <div
-            className="overflow-hidden 
-            p-[30px] w-[100%] h-[100%]
-             relative bg-cover bg-center after:inset-0 
-             after:absolute "
-          >
+        <SwiperSlide
+          key={game._id}
+          className="h-[220px] sm:h-[260px] md:h-[290px]"
+        >
+          <div className="
+            relative w-full h-full rounded-3xl overflow-hidden
+            bg-cover bg-center
+          ">
             <img
               src={game.img}
               alt={game.title}
-              className="absolute rounded-[30px] left-5 top-0 w-[90%]
-               h-[100%] 
-              object-cover object-center brightness-75
+              className="
+                absolute inset-0 w-full h-full
+                object-cover brightness-75
               "
             />
-            <div>
-              {/* <iframe className={`youtube_video ${ active?'active':''}`}
-              width="1200"
-              height="720"
-              src={game.trailer}
-              title={game.title}
-              allowFullScreen
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscpe; picture-in-picture;"
-              >
 
-                </iframe> */}
-            </div>
-           
-            <div className="absolute bottom-[20px] z-50 w-[70%] text-stone-50">
-              <h1 className="logo">{game.title}</h1>
-              <p className="text-slate-300 text-[.8rem]">{game.description}</p>
-              <div className="inline-flex items-center gap-[20px]">
-              
-            
-              </div>
+            {/* Text Overlay */}
+            <div className="
+              absolute bottom-4 left-4 right-4
+              text-stone-50 z-10
+            ">
+              <h1 className="text-lg md:text-xl font-bold">
+                {game.title}
+              </h1>
+              <p className="text-slate-300 text-xs md:text-sm line-clamp-2">
+                {game.description}
+              </p>
             </div>
           </div>
         </SwiperSlide>

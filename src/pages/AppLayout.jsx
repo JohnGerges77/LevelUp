@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 
 import styled from 'styled-components'
-import LaptopScreenMessage from '../components/LaptopScreenMessage'
+
 const Main=styled.main`
   position: absolute;
   top: 0;
@@ -35,11 +35,8 @@ function handleToggleActive(){
 
   return (
 <div>
-  <div className='sm:hidden'>
-<LaptopScreenMessage />
 
-  </div>
-<div className='sm:block hidden'>
+<div className=''>
     <Main>
 <SideMenu active={active} />
 <div className={`banner ${active?'active':""}`}>

@@ -99,3 +99,23 @@ display: none;
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
   5px 5px 15px rgba(0, 0, 0, 0.35);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .side_menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+  .side_menu.active {
+    transform: translateX(0);
+  }
+  .banner {
+    width: 100%;
+  }
+}
